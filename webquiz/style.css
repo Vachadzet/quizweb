@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body {
+    background-color: #10141e;
+    font-family: "Outfit", sans-serif;
+    min-height: 100vh;
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #161d2f;
+    padding: 16px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+  }
+  
+  .logo-img {
+    width: 28px;
+    height: 28px;
+    display: block;
+  }
+  
+  .nav-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    list-style: none;
+  }
+  
+  .nav-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    opacity: 0.5;
+    transition: opacity 0.2s;
+  }
+  
+  .nav-icon:hover,
+  .nav-icon.active {
+    opacity: 1;
+  }
+  
+  .nav-icon img {
+    width: 20px;
+    height: 20px;
+    display: block;
+  }
+  
+  .avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1.5px solid #fff;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  
+  .main {
+    padding: 24px 16px;
+  }
+  
+  .search-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+    max-width: 100%;
+  }
+  
+  .search-container:focus-within {
+    border-bottom-color: #5a698f;
+  }
+  
+  .search-logo {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+  
+  .search-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 16px;
+    flex: 1;
+    caret-color: #fc4747;
+  }
+  
+  .search-input::placeholder {
+    color: #5a698f;
+  }
+  
+  .page-title {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 300;
+    margin: 24px 0;
+  }
+  
+  .series-section {
+    margin-top: 24px;
+  }
+  
+  .page-title {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 16px;
+  }
+  
+  .movies-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  .movie-card {
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 8px);
+  }
+  
+  .thumbnail-wrapper {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    aspect-ratio: 16 / 10;
+  }
+  
+  .thumbnail-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .bookmark-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: rgba(16, 20, 30, 0.5);
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .bookmark-btn:hover {
+    background: #fff;
+  }
+  
+  .bookmark-btn:hover svg {
+    stroke: #10141e;
+  }
+  
+  .movie-info {
+    margin-top: 8px;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.6);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .movie-title {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 4px;
+  }
+  
+  .thumbnail-container {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    aspect-ratio: 16 / 10;
+  }
+  
+  .movie-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .meta-container {
+    margin-top: 8px;
+  }
+  
+  .details-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 11px;
+  }
+  
+  .bookmark-btn.bookmarked {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  @media (min-width: 768px) {
+    nav {
+      padding: 18px 28px;
+    }
+  
+    .nav-icons {
+      gap: 24px;
+    }
+  
+    .avatar {
+      width: 36px;
+      height: 36px;
+    }
+  
+    .main {
+      padding: 40px;
+    }
+  
+    .search-logo {
+      width: 28px;
+      height: 28px;
+    }
+  
+    .search-input {
+      font-size: 18px;
+    }
+  
+    .page-title {
+      font-size: 24px;
+      margin-bottom: 24px;
+    }
+  
+    .movies-grid {
+      gap: 30px;
+    }
+  
+    .movie-card {
+      width: calc(25% - 23px);
+    }
+  
+    .movie-title {
+      font-size: 18px;
+    }
+  
+    .movie-info {
+      font-size: 13px;
+    }
+  
+    .details-row {
+      font-size: 13px;
+    }
+  }
